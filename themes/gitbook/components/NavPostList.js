@@ -35,7 +35,8 @@ const NavPostList = props => {
     setTimeout(() => {
       //默认全部展开
       expandedGroups = Array.from({ length: categoryFolders.length() }, (v, i) => i)
-      setExpandedGroups([expandedGroups])
+      console.log()
+      setExpandedGroups(expandedGroups)
 
       //展开第一个
       // const defaultOpenIndex = getDefaultOpenIndexByPath(
