@@ -36,6 +36,7 @@ const NavPostList = props => {
       //默认全部展开
       expandedGroups = Array.from({ length: categoryFolders.length() }, (v, i) => i)
       console.log(expandedGroups)
+      alert(expandedGroups)
       setExpandedGroups(expandedGroups)
 
       //展开第一个
