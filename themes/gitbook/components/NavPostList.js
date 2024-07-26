@@ -35,7 +35,7 @@ const NavPostList = props => {
     setTimeout(() => {
       //默认全部展开
       expandedGroups = Array.from({ length: categoryFolders.length() }, (v, i) => i)
-      console.log()
+      console.log(expandedGroups)
       setExpandedGroups(expandedGroups)
 
       //展开第一个
