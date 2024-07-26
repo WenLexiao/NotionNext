@@ -33,12 +33,16 @@ const NavPostList = props => {
   // 展开文件夹
   useEffect(() => {
     setTimeout(() => {
-      // 默认展开一个
-      const defaultOpenIndex = getDefaultOpenIndexByPath(
-        categoryFolders,
-        decodeURIComponent(router.asPath.split('?')[0])
-      )
-      setExpandedGroups([defaultOpenIndex])
+      //默认全部展开
+      expandedGroups = Array.from({ length: categoryFolders.length() }, (v, i) => i)
+      setExpandedGroups([expandedGroups])
+
+      //展开第一个
+      // const defaultOpenIndex = getDefaultOpenIndexByPath(
+      //   categoryFolders,
+      //   decodeURIComponent(router.asPath.split('?')[0])
+      // )
+      // setExpandedGroups([defaultOpenIndex])
     }, 500)
   }, [router, filteredNavPages])
 
